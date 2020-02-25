@@ -1,0 +1,15 @@
+function findOutlierB(integers) {
+  var evenArr = integers.filter(function(num) {
+    return num % 2 === 0;
+  });
+  var oddArr = integers.filter(function(num) {
+    return num % 2 !== 0;
+  });
+  if (evenArr.length === 1) {
+    return evenArr[0];
+  } else {
+    return oddArr[0];
+  }
+}
+console.log(findOutlierB([2, 4, 0, 100, 4, 11, 2602, 36])) // 11
+console.log(findOutlierB([160, 3, 1719, 19, 11, 13, -21])) // 160
